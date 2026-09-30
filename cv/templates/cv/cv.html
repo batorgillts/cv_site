@@ -1,0 +1,51 @@
+{% extends "cv/base.html" %}
+
+{% block title %}{{ name }} | CV{% endblock %}
+
+{% block content %}
+  {% include "cv/partials/header.html" %}
+
+  <section id="education" class="cv-section">
+    <h2>Education</h2>
+    {% for school in education %}
+      <article class="entry">
+        <div class="entry-top">
+          <h3>{{ school.school }}</h3>
+          <span class="entry-where">{{ school.location }}</span>
+        </div>
+        <div class="entry-sub">
+          <span>{{ school.degree }}</span>
+          <span class="entry-when">
+            {{ school.start|date:"M Y" }} &ndash;
+            {% if school.expected %}Expected {% endif %}{{ school.end|date:"M Y" }}
+          </span>
+        </div>
+        <ul>
+          {% if school.gpa %}<li><strong>GPA:</strong> {{ school.gpa }}</li>{% endif %}
+          {% if school.honors %}<li><strong>Honors:</strong> {{ school.honors|join:", " }}</li>{% endif %}
+          {% if school.coursework %}<li><strong>Relevant coursework:</strong> {{ school.coursework|join:", " }}</li>{% endif %}
+        </ul>
+      </article>
+    {% endfor %}
+  </section>
+
+  <section id="experience" class="cv-section">
+    <h2>Experience</h2>
+    {% for job in experience %}
+      {% include "cv/partials/entry.html" with item=job %}
+    {% empty %}
+      <p>No experience listed yet.</p>
+    {% endfor %}
+  </section>
+
+  <section id="projects" class="cv-section">
+    <h2>Projects</h2>
+    {% for project in projects %}
+      {% include "cv/partials/entry.html" with item=project %}
+    {% endfor %}
+  </section>
+
+  {% include "cv/partials/skills.html" %}
+{% endblock %}
+
+{% block footer %}Last updated {{ updated|date:"F j, Y" }}{% endblock %}

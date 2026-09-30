@@ -1,0 +1,14 @@
+{% extends "cv/base.html" %}
+
+{% block title %}Contact | {{ name }}{% endblock %}
+
+{% block content %}
+  {% include "cv/partials/header.html" %}
+
+  <section class="cv-section">
+    <h2>Get in touch</h2>
+    <p>The best way to reach me is by email at
+      <a href="mailto:{{ email }}">{{ email }}</a>.</p>
+    <p><a href="{% url 'cv:home' %}">Back to the full CV</a></p>
+  </section>
+{% endblock %}

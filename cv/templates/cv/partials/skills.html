@@ -1,0 +1,11 @@
+<section id="skills" class="cv-section">
+  <h2>Skills</h2>
+  <dl class="skills">
+    {% for category, items in skills.items %}
+      <div class="skill-row">
+        <dt>{{ category }}</dt>
+        <dd>{{ items|join:", " }}</dd>
+      </div>
+    {% endfor %}
+  </dl>
+</section>

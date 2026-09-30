@@ -1,0 +1,10 @@
+<header class="cv-header">
+  <h1>{{ name|upper }}</h1>
+  <p class="contact-line">
+    <span>{{ phone }}</span>
+    <a href="mailto:{{ email }}">{{ email }}</a>
+    {% for link in links %}
+      <a href="{{ link.url }}">{{ link.label }}</a>
+    {% endfor %}
+  </p>
+</header>

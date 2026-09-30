@@ -1,0 +1,25 @@
+{# Reusable block for one experience or project. Expects a variable named "item". #}
+<article class="entry">
+  <div class="entry-top">
+    <h3>{{ item.title }}{% if item.org %}<span class="entry-org">, {{ item.org }}</span>{% endif %}</h3>
+    <span class="entry-when">
+      {% if item.end == item.start %}
+        {{ item.start|date:"M Y" }}
+      {% else %}
+        {{ item.start|date:"M Y" }} &ndash;
+        {% if item.end %}{{ item.end|date:"M Y" }}{% else %}Present{% endif %}
+      {% endif %}
+    </span>
+  </div>
+  {% if item.tech or item.location %}
+    <div class="entry-sub">
+      <span class="tech">{{ item.tech|join:", " }}</span>
+      {% if item.location %}<span class="entry-where">{{ item.location }}</span>{% endif %}
+    </div>
+  {% endif %}
+  <ul>
+    {% for bullet in item.bullets %}
+      <li>{{ bullet }}</li>
+    {% endfor %}
+  </ul>
+</article>
