@@ -1,3 +1,2 @@
 from django.db import models
-
-# Create your models here.
+#for future use, if I want to add a model for the CV

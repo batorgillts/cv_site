@@ -1,4 +1,4 @@
-/* ---------- Design tokens ---------- */
+/*Design tokens*/
 :root {
   --ink: #1f1f24;          /* main text */
   --muted: #5d5d66;        /* dates, locations, tech lines */
@@ -25,7 +25,7 @@ body {
 a { color: var(--accent); }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-/* ---------- Top navigation ---------- */
+/*Top navigation*/
 .site-nav {
   max-width: 860px;
   margin: 0 auto;
@@ -49,7 +49,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 }
 .print-btn:hover { background: var(--accent); color: var(--paper); }
 
-/* ---------- The paper sheet ---------- */
+/*The paper sheet*/
 .page {
   max-width: 860px;
   margin: 0 auto;
@@ -58,7 +58,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   border: 1px solid var(--rule);
 }
 
-/* ---------- Header ---------- */
+/*Header*/
 .cv-header { text-align: center; margin-bottom: 8px; }
 .cv-header h1 {
   margin: 0;
@@ -77,7 +77,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   color: var(--muted);
 }
 
-/* ---------- Sections ---------- */
+/* Sections*/
 .cv-section { margin-top: 22px; }
 .cv-section h2 {
   margin: 0 0 10px;
@@ -88,7 +88,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   border-bottom: 2px solid var(--accent);
 }
 
-/* ---------- Entries (jobs, projects, schools) ---------- */
+/*Entries (jobs, projects, schools)*/
 .entry { margin-bottom: 12px; }
 .entry-top, .entry-sub {
   display: flex;
@@ -104,13 +104,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .entry ul { margin: 4px 0 0; padding-left: 20px; }
 .entry li { margin-bottom: 2px; }
 
-/* ---------- Skills ---------- */
+/*Skills*/
 .skills { margin: 0; }
 .skill-row { display: flex; gap: 12px; margin-bottom: 3px; }
 .skill-row dt { font-weight: 700; min-width: 100px; }
 .skill-row dd { margin: 0; }
 
-/* ---------- Footer ---------- */
+/*Footer*/
 .site-footer {
   max-width: 860px;
   margin: 0 auto;
@@ -120,14 +120,14 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   text-align: center;
 }
 
-/* ---------- Small screens ---------- */
+/*Small screens*/
 @media (max-width: 640px) {
   .page { padding: 28px 20px; border-left: 0; border-right: 0; }
   .entry-top, .entry-sub { flex-direction: column; gap: 0; }
   .skill-row { flex-direction: column; gap: 0; }
 }
 
-/* ---------- Printing ---------- */
+/*Printing*/
 @page { size: letter; margin: 0.5in; }
 
 @media print {

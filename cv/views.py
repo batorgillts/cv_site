@@ -53,8 +53,7 @@ EDUCATION = [
     },
 ]
 
-# Experience and projects share the same shape (title, org, dates, tech,
-# bullets), so one partial template can render both.
+# Experience and projects share the same shape (title, org, dates, tech, bullets), so one partial template can render both.
 EXPERIENCE = [
     {
         "title": "Software Development Intern",
