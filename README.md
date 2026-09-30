@@ -30,6 +30,8 @@ Then open http://127.0.0.1:8000/
 
 ## Project structure
 
+![CV screenshot](screenshot.png)
+
 ```
 config/          project settings and root URLs
 cv/views.py      CV data and views
